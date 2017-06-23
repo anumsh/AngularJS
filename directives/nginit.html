@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+The ng-init directive can be used to initialize variables in AngularJS application.
+-->
+
+
+<html>
+<head>
+    <title> ng init example</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js" ></script>
+</head>
+<body>
+<div ng-app ng-init="greet='Hello'; amount=100;
+        myArr= [10,20]; person= {firstName: 'anum', lastName :'pathak'}">
+    {{amount}} <br>
+    {{myArr[1]}} <br>
+    {{person.firstName}}
+   </div>
+</body>
+</html>
