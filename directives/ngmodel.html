@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+The ng-model directive is used for two-way data binding in AngularJS. It binds <input>, <select> or <textarea> elements to a specified property on the $scope object. So, the value of the element will be the value of a property and vica-versa.
+-->
+
+
+<html>
+<head>
+    <title> ng model example</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js" ></script>
+</head>
+<body ng-app>
+    <input type="text" ng-model="name" />
+    <div>
+       Hello {{name}}
+    </div>
+
+</body>
+</html>
