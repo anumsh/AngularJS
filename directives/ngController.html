@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+The ng-controller directive is used to specify a controller in HTML element, which will add behavior or maintain the data in that HTML element and its child elements.
+-->
+
+
+<html>
+<head>
+    <title> ng if , realy-only and disabled  example</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js" >
+    </script>
+</head>
+<body ng-app="myNgApp">
+    <div ng-controller="myController">
+        {{message}}
+    </div>
+    <script>
+        var ngApp = angular.module('myNgApp', []);
+
+        ngApp.controller('myController', function ($scope) {
+            $scope.message = "Hello World!";
+        });
+    </script>
+</body>
+</html>
