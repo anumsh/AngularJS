@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Controller</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js" >
+    </script>
+</head>
+<body ng-app="myNgApp">
+    <div ng-controller="parentController">
+        Message: {{message1}}
+        <div ng-controller="childController">
+            Parent Message: {{message1}}  </br>
+            Child Message: {{message2}}
+        </div>
+        Child Message: {{message2}}
+    </div>
+    <script>
+         var ngApp = angular.module('myNgApp', []);
+
+        ngApp.controller('parentController', function ($scope) {
+            $scope.message1 = "This is parentController";
+        });
+
+        ngApp.controller('childController', function ($scope) {
+            $scope.message2 = "This is childController";
+        });
+    </script>
+</body>
+</html>
+
+<!--
+output:
+
+Message: This is parentController
+Parent Message: This is parentController
+Child Message: This is childController
+Child Message:
+
+a child controller can access properties and methods attached in parent controller function, whereas parent controller cannot access properties and methods attached in child controller.
+    -->
