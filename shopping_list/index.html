@@ -1,0 +1,27 @@
+<!-- My Shopping List Application (add and remove items from lists) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List</title>
+    <script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js" >
+    </script>
+    <script>
+var app = angular.module("myShoppingList", []);
+/* add a controller named myCtrl   */
+app.controller("myCtrl", function($scope) {
+    /*   The controller adds an array named products to the current $scope.            */
+    $scope.products = ["Milk", "Bread", "Cheese"];
+});
+</script>
+
+</head>
+<body>
+    <h2> 1. My Shopping List </h2>
+    <div ng-app="myShoppingList" ng-controller="myCtrl">
+    <ul>
+        <!--  we use the ng-repeat directive to display a list using the items in the array -->
+        <li ng-repeat="x in products">{{x}}</li>
+    </ul>
+</div>
+</body>
+</html>
