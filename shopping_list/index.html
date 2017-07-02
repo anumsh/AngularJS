@@ -11,6 +11,10 @@ var app = angular.module("myShoppingList", []);
 app.controller("myCtrl", function($scope) {
     /*   The controller adds an array named products to the current $scope.            */
     $scope.products = ["Milk", "Bread", "Cheese"];
+    // Add Item
+    $scope.addItem = function () {
+        $scope.products.push($scope.addMe);
+    }
 });
 </script>
 
@@ -22,6 +26,9 @@ app.controller("myCtrl", function($scope) {
         <!--  we use the ng-repeat directive to display a list using the items in the array -->
         <li ng-repeat="x in products">{{x}}</li>
     </ul>
+    <!-- 2. step-2 Add Item-->
+    <input ng-model="addMe">
+    <button ng-click="addItem()">Add</button>
 </div>
 </body>
 </html>
