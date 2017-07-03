@@ -15,6 +15,9 @@ app.controller("myCtrl", function($scope) {
     $scope.addItem = function () {
         $scope.products.push($scope.addMe);
     }
+     $scope.removeItem = function (x) {
+        $scope.products.splice(x, 1);
+    }
 });
 </script>
 
@@ -24,11 +27,12 @@ app.controller("myCtrl", function($scope) {
     <div ng-app="myShoppingList" ng-controller="myCtrl">
     <ul>
         <!--  we use the ng-repeat directive to display a list using the items in the array -->
-        <li ng-repeat="x in products">{{x}}</li>
+        <li ng-repeat="x in products">{{x}} <span ng-click="removeItem($index)">&times;</span></li>
     </ul>
     <!-- 2. step-2 Add Item-->
     <input ng-model="addMe">
     <button ng-click="addItem()">Add</button>
+
 </div>
 </body>
 </html>
