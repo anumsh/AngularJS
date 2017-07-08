@@ -1,0 +1,23 @@
+<!doctype html>
+<!--
+* So creating <input ng-model="yourName">  will create test variable.
+* All changes in input value will update yourName,
+* and all change in yourName will update input.
+* This feature is called 'two-way binding'.
+* We can access the same variable using {{variable}} syntax.
+
+ -->
+
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" placeholder="Enter a name here" ng-model="yourName">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+  </body>
+</html>

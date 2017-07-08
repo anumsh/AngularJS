@@ -1,0 +1,38 @@
+<!doctype html>
+<!--
+The same works for ng-repeat loops.
+We can use filter filter to find the objects containing specific string.
+The syntax is
+ng-repeat="element in array | filter:value"
+Then if we set "Hello" to value, only objects containing that name will be displayed on the list.
+-->
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script>
+        function UsersCtrl($scope) {
+            $scope.users = [
+                { name: "Camila Gilson" },
+                { name: "Chloe Creighton" },
+                { name: "Zoey White" },
+                { name: "Claire Campbell" },
+                { name: "Kylie Smith" },
+                { name: "Charlotte Gilson" }
+            ];
+
+            $scope.title = 'User list';
+        }
+    </script>
+  </head>
+  <body>
+    <div ng-controller="UsersCtrl">
+        <h1>{{title}}</h1>
+        Search: <input ng-model="search">
+        <ul>
+            <li ng-repeat="user in users | filter:search">
+                {{user.name | uppercase}}
+            </li>
+        </ul>
+    </div>
+  </body>
+</html>

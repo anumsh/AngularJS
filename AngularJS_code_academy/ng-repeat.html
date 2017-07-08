@@ -1,0 +1,27 @@
+<!doctype html>
+<!--
+* ng-repeat= iterate over all elements on the list, and apply the same layout to each of them.
+-->
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script>
+        function UsersCtrl($scope) {
+            $scope.users = [{name: "Anum", age: 21}, {name: "Damini", age: 29}];
+        }
+    </script>
+  </head>
+  <body>
+    <div ng-controller="UsersCtrl">
+        <ul>
+            <li ng-repeat="user in users">
+                Name: {{user.name}}, {{user.age}} years old.
+            </li>
+        </ul>
+    </div>
+  </body>
+</html>
+
+<!--
+* ng-repeat= iterate over all elements on the list, and apply the same layout to each of them.
+-->

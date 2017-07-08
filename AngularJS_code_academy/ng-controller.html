@@ -1,0 +1,30 @@
+<!doctype html>
+<!--
+* Different parts of page have different logic. To keep it separated we can use controllers.
+*  Each section of a page – main menu, login box, comment box – is expected to have its own controller.
+* Each place where controller is applied has different scope.
+* $scope is special object designed to allow communication between controller and the view.
+* The simplest controller is just a function.
+* We can apply controller with ng-controller directive.
+* Set the value to specific controller name.
+-->
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script>
+        function ExampleCtrl($scope) {
+            $scope.value = "Anum Pathak";
+        }
+    </script>
+  </head>
+  <body>
+    <div ng-controller="ExampleCtrl">
+        <input ng-model="value" ><br>
+        {{value}}
+    </div>
+    <div ng-controller="ExampleCtrl">
+        <input ng-model="value"><br>
+        {{value}}
+    </div>
+  </body>
+</html>
