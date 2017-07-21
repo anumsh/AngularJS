@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+	<!--  aap .js and post.js files     -->
+        <script src="app.js"></script>
+        <script src="post.js"></script>
+    </head>
+	<!-- step 1  -->
+    <body ng-app="blogApp">
+        <nav>
+		<!-- step -2   -->
+            <a href="#/post/1">Blog post</a>
+            <a href="#/post/2">Other post</a>
+            <a href="#/post/3">Last post</a>
+        </nav>
+        <!-- step-3           Place where our user will be displayed -->
+        <div ng-view> </div>
+    </body>
+</html>
