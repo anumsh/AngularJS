@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+        <script src="app.js"></script>
+        <script src="cart.js"></script>
+        <script src="cartBoxCtrl.js"></script>
+        <script src="productListCtrl.js"></script>
+    </head>
+    <body ng-app="shopApp">
+        <div ng-controller="cartBoxCtrl">
+            <h1>Cart content</h1>
+            <ul>
+                <li ng-repeat="product in cart">
+                    {{product.name}}
+                </li>
+            </ul>
+        </div>
+        <div ng-controller="productListCtrl">
+            <ul>
+                <li ng-repeat="product in products">
+                    {{product.name}}
+                    <button ng-click="addToCart(product)">
+                        Add to cart
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
