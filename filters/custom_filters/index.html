@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="numberCtrl.js"></script>
+        <script src="lessThan.js"></script>
+    </head>
+    <body ng-app="filterApp">
+        <div ng-controller="numbersCtrl">
+            <ul>
+                <li ng-repeat="number in numbers">
+                    {{number.value}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
